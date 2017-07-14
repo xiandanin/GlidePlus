@@ -6,7 +6,7 @@
 ![](screenshot/screenshot.gif)
 
 ## __对比图__
-![](screenshot/compared.jpg)
+![](screenshot/example-compared.jpg)
 
 ## __示例apk__
 ![](screenshot/example-download.png)
