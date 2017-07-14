@@ -17,7 +17,7 @@ import java.io.InputStream;
 import pl.droidsonroids.gif.GifDrawable;
 
 /**
- * An {@link ResourceDecoder} that can decode either an {@link Bitmap} or an {@link GifDrawable}
+ * An com.bumptech.glide.load.ResourceDecoder that can decode either an {@link Bitmap} or an pl.droidsonroids.gif.GifDrawable
  * from an {@link InputStream} or a {@link android.os.ParcelFileDescriptor ParcelFileDescriptor}.
  */
 public class ImageWrapperResourceDecoder implements ResourceDecoder<ImageVideoWrapper, ImageWrapper> {

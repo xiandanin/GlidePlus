@@ -50,6 +50,7 @@ public class GlideSupport {
                 .decoder(new ImageWrapperStreamResourceDecoder(mContext))
                 .cacheDecoder(new ImageWrapperFileToStreamDecoder(mContext))
                 .sourceEncoder(new StreamEncoder())
+                .animate(new DrawableCrossFadeAnimator())
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE);
         return this;
     }

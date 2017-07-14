@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * A {@link ResourceDecoder} that can decode an
- * {@link com.dyhdyh.support.glide.resource.gifbitmap.ImageWrapper} from {@link InputStream} data.
+ * A com.bumptech.glide.load.ResourceDecoder that can decode an
+ * {@link ImageWrapper} from {@link InputStream} data.
  */
 public class ImageWrapperStreamResourceDecoder implements ResourceDecoder<InputStream, ImageWrapper> {
     private final ResourceDecoder<ImageVideoWrapper, ImageWrapper> gifBitmapDecoder;

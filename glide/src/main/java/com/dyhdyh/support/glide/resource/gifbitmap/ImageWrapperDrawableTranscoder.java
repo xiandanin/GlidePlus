@@ -10,8 +10,8 @@ import com.bumptech.glide.load.resource.transcode.GlideBitmapDrawableTranscoder;
 import com.bumptech.glide.load.resource.transcode.ResourceTranscoder;
 
 /**
- * An {@link ResourceTranscoder} that can transcode either an
- * {@link Bitmap} or an {@link pl.droidsonroids.gif.GifDrawable} into an
+ * An com.bumptech.glide.load.resource.transcode.ResourceTranscoder that can transcode either an
+ * {@link Bitmap} or an pl.droidsonroids.gif.GifDrawable into an
  * {@link android.graphics.drawable.Drawable}.
  */
 public class ImageWrapperDrawableTranscoder implements ResourceTranscoder<ImageWrapper, Drawable> {

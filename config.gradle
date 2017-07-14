@@ -1,0 +1,32 @@
+ext {
+    android =
+            [
+                    versionCode      : 1,
+                    versionName      : "1.0.0",
+
+                    compileSdkVersion: 25,
+                    buildToolsVersion: "25.0.2",
+                    minSdkVersion    : 14,
+                    targetSdkVersion : 25,
+                    supportVersion   : "25.3.0",
+            ]
+
+    jcenter =
+            [
+                    //项目名称
+                    name       : "glide-support",
+                    groupId    : "com.dyhdyh.support",
+                    //项目地址
+                    siteUrl    : "https://github.com/dengyuhan/glide-support",
+                    //项目git地址
+                    gitUrl     : "https://github.com/dengyuhan/glide-support.git",
+                    //项目描述
+                    description: "基于Glide的一系列扩展，强化了对GIF的支持",
+                    //开发者的一些基本信息
+                    authorId   : "dengyuhan",
+                    authorName : "dengyuhan",
+                    authorEmail: "22309946@qq.com",
+            ]
+
+
+}
