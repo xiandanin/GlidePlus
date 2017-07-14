@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     private void loadGlide(String url) {
         Glide.with(this)
                 .load(url)
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 .gifEnhancement()//开启gif增强
                 .circle()//圆形
                 //.crossFade()//淡入淡出(默认开启)
-                //.transform()
+                //.transform(new ImageWrapperCircleTransformation())
                 //.animate(new DrawableScaleBounceAnimator())
                 .glide()
                 .load(url)
