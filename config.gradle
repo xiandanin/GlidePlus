@@ -21,7 +21,7 @@ ext {
                     //项目git地址
                     gitUrl     : "https://github.com/dengyuhan/glide-support.git",
                     //项目描述
-                    description: "基于Glide的一系列扩展，强化了对GIF的支持",
+                    description: "基于Glide的一系列扩展，强化对GIF的支持",
                     //开发者的一些基本信息
                     authorId   : "dengyuhan",
                     authorName : "dengyuhan",
