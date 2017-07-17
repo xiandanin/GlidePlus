@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
         //400*800
         //String url="http://www.cheerinus.com/upload_files/qb_news_/95/68143_20160528050505_fttee.gif";
+
+        //背景透明
+        //String url="http://i4.piimg.com/1949/448259b71240aa90.gif";
         loadGlide(url);
     }
 

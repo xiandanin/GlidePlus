@@ -2,12 +2,6 @@
 基于[glide](https://github.com/bumptech/glide)与
 [android-gif-drawable](https://github.com/koral--/android-gif-drawable)对Glide处理Gif进行加强
 
-## __效果__
-![](screenshot/screenshot.gif)
-
-## __对比图__
-![](screenshot/example-compared-small.png)
-
 ## __示例apk__
 ![](screenshot/example-download.png)
 
@@ -31,3 +25,10 @@ GlideSupport.with(this)
                 .error(R.mipmap.error)
                 .into(iv);
 ```
+
+## __效果__
+![](screenshot/screenshot.gif)
+
+## __对比图__
+![](screenshot/example-compared-small.png)
+
