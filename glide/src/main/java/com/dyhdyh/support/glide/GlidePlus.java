@@ -23,17 +23,17 @@ import java.io.InputStream;
  * author  dengyuhan
  * created 2017/7/13 16:17
  */
-public class GlideSupport {
+public class GlidePlus {
 
     private GenericRequestBuilder<String, InputStream, ImageWrapper, Drawable> mRequestBuilder;
     private Context mContext;
 
-    public GlideSupport(Context context) {
+    public GlidePlus(Context context) {
         this.mContext = context;
     }
 
-    public static GlideSupport with(Context context) {
-        return new GlideSupport(context);
+    public static GlidePlus with(Context context) {
+        return new GlidePlus(context);
     }
 
     /**
@@ -41,7 +41,7 @@ public class GlideSupport {
      *
      * @return
      */
-    public GlideSupport gifEnhancement() {
+    public GlidePlus gifPlus() {
         mRequestBuilder = Glide.with(mContext)
                 .using(new StreamStringLoader(mContext), InputStream.class)
                 .from(String.class)
@@ -61,7 +61,7 @@ public class GlideSupport {
      *
      * @return
      */
-    public GlideSupport crossFade() {
+    public GlidePlus crossFade() {
         mRequestBuilder.animate(new DrawableCrossFadeAnimator());
         return this;
     }
@@ -71,19 +71,19 @@ public class GlideSupport {
      *
      * @return
      */
-    public GlideSupport circle() {
+    public GlidePlus circle() {
         mRequestBuilder.transform(new ImageWrapperCircleTransformation(mContext));
         return this;
     }
 
 
-    public GlideSupport transform(ImageWrapperTransformation transformation) {
+    public GlidePlus transform(ImageWrapperTransformation transformation) {
         mRequestBuilder.transform(transformation);
         return this;
     }
 
 
-    public GlideSupport animate(ViewPropertyAnimation.Animator animator) {
+    public GlidePlus animate(ViewPropertyAnimation.Animator animator) {
         mRequestBuilder.animate(animator);
         return this;
     }

@@ -1,12 +1,13 @@
 package com.dyhdyh.support.glide.example;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.dyhdyh.support.glide.GlideSupport;
+import com.dyhdyh.support.glide.GlidePlus;
 import com.dyhdyh.support.glide.transformations.CircleTransformation;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         iv_glide = (ImageView) findViewById(R.id.iv_glide);
         iv_gif = (ImageView) findViewById(R.id.iv_gif);
+
     }
 
 
@@ -69,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
                 .error(R.mipmap.ic_launcher_round)
                 .into(iv_glide);
 
-        GlideSupport.with(this)
-                .gifEnhancement()//开启gif增强
+        GlidePlus.with(this)
+                .gifPlus()//开启gif增强
                 .circle()//圆形
                 //.crossFade()//淡入淡出(默认开启)
                 //.transform(new ImageWrapperCircleTransformation())

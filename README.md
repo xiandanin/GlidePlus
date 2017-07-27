@@ -13,8 +13,8 @@ compile 'com.dyhdyh.support:glide:1.0.0'
 
 #### 示例
 ```
-GlideSupport.with(this)
-                .gifEnhancement()//开启gif增强
+GlidePlus.with(this)
+                .gifPlus()//开启gif增强
                 .circle()//圆形
                 //.crossFade()//淡入淡出(默认开启)
                 //.transform(new ImageWrapperCircleTransformation())
