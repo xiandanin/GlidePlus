@@ -8,7 +8,7 @@
 ## __快速开始__
 ####  Gradle
 ```
-compile 'com.dyhdyh.support:glide:1.0.0'
+compile 'com.dyhdyh.support:glide-plus:1.0.1'
 ```
 
 #### 示例
