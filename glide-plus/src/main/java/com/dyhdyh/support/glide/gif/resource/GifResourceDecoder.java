@@ -19,9 +19,9 @@ public class GifResourceDecoder implements ResourceDecoder<InputStream, GifDrawa
 
     @Override
     public Resource<GifDrawable> decode(InputStream source, int width, int height) throws IOException {
-       byte[] bytes = mByteDecoder.decode(source, width, height).get();
+        byte[] bytes = mByteDecoder.decode(source, width, height).get();
         GifDrawable gifDrawable = new GifDrawable(bytes);
-        return new GifDrawableResource(gifDrawable);
+        return new GifDrawableResource(gifDrawable, bytes);
     }
 
     @Override

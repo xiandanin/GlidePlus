@@ -10,14 +10,21 @@ import pl.droidsonroids.gif.GifDrawable;
  */
 public class GifDrawableResource implements Resource<GifDrawable> {
     private GifDrawable drawable;
+    private byte[] data;
 
-    public GifDrawableResource(GifDrawable gifDrawable) {
+    public GifDrawableResource(GifDrawable gifDrawable, byte[] data) {
         this.drawable = gifDrawable;
+        this.data = data;
     }
 
     @Override
     public GifDrawable get() {
-        return drawable;
+        try {
+            return new GifDrawable(data);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return drawable;
+        }
     }
 
     @Override
