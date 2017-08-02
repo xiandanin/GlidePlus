@@ -1,1 +1,1 @@
-include ':app', ':glide-plus'
+include ':example', ':glide-plus'
