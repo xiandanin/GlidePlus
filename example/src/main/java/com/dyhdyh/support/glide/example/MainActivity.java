@@ -1,6 +1,5 @@
 package com.dyhdyh.support.glide.example;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         iv_glide = (ImageView) findViewById(R.id.iv_glide);
         iv_gif = (ImageView) findViewById(R.id.iv_gif);
-
     }
 
 
