@@ -3,6 +3,7 @@ package com.dyhdyh.support.glide.gif.resource;
 import com.bumptech.glide.load.engine.Resource;
 
 import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.transforms.Transform;
 
 /**
  * author  dengyuhan
@@ -11,6 +12,7 @@ import pl.droidsonroids.gif.GifDrawable;
 public class GifDrawableResource implements Resource<GifDrawable> {
     private GifDrawable drawable;
     private byte[] data;
+    private Transform gifTransform;
 
     public GifDrawableResource(GifDrawable gifDrawable, byte[] data) {
         this.drawable = gifDrawable;
@@ -20,11 +22,18 @@ public class GifDrawableResource implements Resource<GifDrawable> {
     @Override
     public GifDrawable get() {
         try {
-            return new GifDrawable(data);
+            GifDrawable newDrawable = new GifDrawable(data);
+            newDrawable.setLoopCount(drawable.getLoopCount());
+            newDrawable.setTransform(gifTransform);
+            return newDrawable;
         } catch (Exception e) {
             e.printStackTrace();
             return drawable;
         }
+    }
+
+    public void setGifTransform(Transform gifTransform) {
+        this.gifTransform = gifTransform;
     }
 
     @Override
