@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 
 import com.bumptech.glide.load.Transformation;
 import com.bumptech.glide.load.engine.Resource;
+import com.dyhdyh.support.glide.gif.resource.GifDrawableResource;
 import com.dyhdyh.support.glide.gif.transform.OverrideSizeTransform;
 import com.dyhdyh.support.glide.resource.gifbitmap.ImageWrapper;
 import com.dyhdyh.support.glide.resource.gifbitmap.ImageWrapperResource;
@@ -12,6 +13,7 @@ import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.transforms.Transform;
 
 /**
+ * 包装gif bitmap支持glide的Transformation
  * author  dengyuhan
  * created 2017/7/13 14:38
  */
@@ -38,7 +40,11 @@ public abstract class ImageWrapperTransformation implements Transformation<Image
             if (mGifTransform instanceof OverrideSizeTransform) {
                 ((OverrideSizeTransform) mGifTransform).setDrawSize(outWidth, outHeight);
             }
-            gifResource.get().setTransform(mGifTransform);
+            if (gifResource instanceof GifDrawableResource){
+                ((GifDrawableResource) gifResource).setGifTransform(mGifTransform);
+            }else{
+                gifResource.get().setTransform(mGifTransform);
+            }
         }
         return resource;
     }

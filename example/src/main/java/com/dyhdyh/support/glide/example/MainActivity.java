@@ -1,13 +1,14 @@
 package com.dyhdyh.support.glide.example;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.dyhdyh.support.glide.GlidePlus;
-import com.dyhdyh.support.glide.transformations.CircleTransformation;
 
 public class MainActivity extends AppCompatActivity {
     ImageView iv_glide;
@@ -61,9 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void loadGlide(String url) {
+        int radius = getResources().getDimensionPixelSize(R.dimen.rounded_corners);
         Glide.with(this)
                 .load(url)
-                .bitmapTransform(new CircleTransformation(this))//圆形
+                //.bitmapTransform(new BitmapCircleTransformation(this))//圆形
+                .bitmapTransform(new CenterCrop(this),new jp.wasabeef.glide.transformations.RoundedCornersTransformation(this,radius,0))
                 .crossFade()//淡入淡出
                 .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher_round)
@@ -73,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
                 .gifPlus()//开启gif增强
                 .circle()//圆形
                 //.crossFade()//淡入淡出(默认开启)
-                //.transform(new ImageWrapperCircleTransformation())
                 //.animate(new DrawableScaleBounceAnimator())
                 .glide()
                 .load(url)
@@ -81,6 +83,12 @@ public class MainActivity extends AppCompatActivity {
                 .error(R.mipmap.ic_launcher_round)
                 .into(iv_gif);
     }
+
+
+    public void clickRecyclerView(View  v) {
+        startActivity(new Intent(this,GifRecyclerActivity.class));
+    }
+
 
 
 }

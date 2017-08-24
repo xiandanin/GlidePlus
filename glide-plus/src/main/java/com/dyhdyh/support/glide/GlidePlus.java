@@ -14,7 +14,7 @@ import com.dyhdyh.support.glide.resource.gifbitmap.ImageWrapper;
 import com.dyhdyh.support.glide.resource.gifbitmap.ImageWrapperDrawableTranscoder;
 import com.dyhdyh.support.glide.resource.gifbitmap.ImageWrapperFileToStreamDecoder;
 import com.dyhdyh.support.glide.resource.gifbitmap.ImageWrapperStreamResourceDecoder;
-import com.dyhdyh.support.glide.transformations.ImageWrapperCircleTransformation;
+import com.dyhdyh.support.glide.transformations.CircleTransformation;
 import com.dyhdyh.support.glide.transformations.ImageWrapperTransformation;
 
 import java.io.InputStream;
@@ -72,7 +72,7 @@ public class GlidePlus {
      * @return
      */
     public GlidePlus circle() {
-        mRequestBuilder.transform(new ImageWrapperCircleTransformation(mContext));
+        mRequestBuilder.transform(new CircleTransformation(mContext));
         return this;
     }
 
