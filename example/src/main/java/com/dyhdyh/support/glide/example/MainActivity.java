@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.dyhdyh.support.glide.GlidePlus;
+import com.dyhdyh.support.glide.transformations.BitmapCircleTransformation;
 
 public class MainActivity extends AppCompatActivity {
     ImageView iv_glide;
@@ -65,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
         int radius = getResources().getDimensionPixelSize(R.dimen.rounded_corners);
         Glide.with(this)
                 .load(url)
-                //.bitmapTransform(new BitmapCircleTransformation(this))//圆形
-                .bitmapTransform(new CenterCrop(this),new jp.wasabeef.glide.transformations.RoundedCornersTransformation(this,radius,0))
+                .bitmapTransform(new BitmapCircleTransformation(this))//圆形
                 .crossFade()//淡入淡出
                 .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher_round)
