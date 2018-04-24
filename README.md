@@ -9,6 +9,7 @@
 ####  Gradle
 ```
 compile 'com.dyhdyh.support:glide-plus:1.0.1'
+compile 'com.github.bumptech.glide:glide:3.7.0'
 ```
 
 #### 示例
