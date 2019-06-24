@@ -1,4 +1,7 @@
-# glide-support
+### 本项目已过时，Glide4.0后对GIF已经有很好的支持
+
+<br/>
+<br/>
 基于[glide](https://github.com/bumptech/glide)与
 [android-gif-drawable](https://github.com/koral--/android-gif-drawable)对Glide处理Gif进行加强
 
